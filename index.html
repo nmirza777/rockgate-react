@@ -3,102 +3,660 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rockgate Capital</title>
-  <meta name="description" content="Rockgate Capital website coming soon." />
+  <title>Rockgate Capital | Mortgage & Property Finance</title>
+  <meta name="description" content="Rockgate Capital provides professional mortgage and property finance guidance across residential, buy-to-let, remortgage, and specialist property finance." />
   <style>
     :root {
-      --bg: #0b1220;
-      --panel: rgba(255,255,255,0.06);
+      --bg: #08101c;
+      --bg-soft: #0f1b2d;
+      --panel: rgba(255,255,255,0.05);
+      --panel-strong: rgba(255,255,255,0.08);
       --text: #f5f7fb;
       --muted: #b8c1d1;
       --line: rgba(255,255,255,0.12);
       --accent: #d4af37;
+      --accent-soft: rgba(212,175,55,0.18);
+      --max: 1180px;
+      --shadow: 0 24px 60px rgba(0,0,0,0.34);
     }
 
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
-      min-height: 100vh;
       font-family: Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(circle at top, rgba(212,175,55,0.16), transparent 30%),
-        linear-gradient(180deg, #0b1220 0%, #111827 100%);
+        radial-gradient(circle at top left, rgba(212,175,55,0.12), transparent 25%),
+        radial-gradient(circle at top right, rgba(255,255,255,0.05), transparent 18%),
+        linear-gradient(180deg, #08101c 0%, #0b1220 45%, #0f1727 100%);
       color: var(--text);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(8,16,28,0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .mark {
+      width: 50px;
+      height: 50px;
+      border-radius: 16px;
+      border: 1px solid rgba(212,175,55,0.34);
+      background: linear-gradient(135deg, rgba(212,175,55,0.22), rgba(255,255,255,0.04));
       display: grid;
       place-items: center;
-      padding: 24px;
-    }
-
-    .card {
-      width: 100%;
-      max-width: 720px;
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 48px 32px;
-      text-align: center;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
-    }
-
-    .logo {
-      display: inline-block;
-      padding: 10px 16px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
       color: var(--accent);
-      font-weight: bold;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-size: 13px;
-      margin-bottom: 24px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
     }
 
-    h1 {
-      margin: 0 0 16px;
-      font-size: clamp(34px, 6vw, 56px);
-      line-height: 1.05;
-      letter-spacing: -0.02em;
+    .brand-text strong {
+      display: block;
+      font-size: 17px;
+      letter-spacing: 0.04em;
     }
 
-    p {
-      margin: 0 auto;
-      max-width: 540px;
+    .brand-text span {
+      display: block;
       color: var(--muted);
-      font-size: 18px;
-      line-height: 1.65;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 4px;
     }
 
-    .footer {
-      margin-top: 32px;
-      padding-top: 24px;
-      border-top: 1px solid var(--line);
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
       color: var(--muted);
       font-size: 14px;
     }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
+    .nav-links a:hover { color: var(--text); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 600;
+      transition: 0.25s ease;
+      cursor: pointer;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .btn-primary {
+      background: linear-gradient(180deg, #dfbc55 0%, #c89f26 100%);
+      color: #111827;
+      box-shadow: 0 16px 36px rgba(212,175,55,0.18);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 40px rgba(212,175,55,0.24);
+    }
+
+    .btn-secondary {
+      border-color: rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.03);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.07);
+    }
+
+    .hero {
+      padding: 86px 0 56px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid rgba(212,175,55,0.22);
+      background: rgba(212,175,55,0.08);
+      color: #f2d98a;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(26px, 4.2vw, 44px);
+      line-height: 1.06;
+      letter-spacing: -0.04em;
+      max-width: 720px;
+    }
+
+    .lead {
+      margin: 22px 0 0;
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 26px;
+      margin-top: 34px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .hero-meta strong {
+      display: block;
+      color: var(--text);
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .showcase {
+      position: relative;
+      padding: 34px;
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .showcase::before {
+      content: "";
+      position: absolute;
+      inset: -40% auto auto -20%;
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(212,175,55,0.20), transparent 70%);
+      pointer-events: none;
+    }
+
+    .crest {
+      width: 86px;
+      height: 86px;
+      border-radius: 24px;
+      display: grid;
+      place-items: center;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      background: linear-gradient(135deg, rgba(212,175,55,0.20), rgba(255,255,255,0.04));
+      border: 1px solid rgba(212,175,55,0.34);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+      margin-bottom: 24px;
+    }
+
+    .showcase-card {
+      background: rgba(6,14,25,0.55);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 22px;
+      padding: 22px;
+      margin-top: 18px;
+    }
+
+    .showcase-card small,
+    .section-label {
+      display: inline-block;
+      color: #f2d98a;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 11px;
+      margin-bottom: 10px;
+    }
+
+    .showcase-card h3,
+    .section-title {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .showcase-card p,
+    .section-copy {
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    section {
+      padding: 34px 0;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 24px;
+    }
+
+    .grid-3,
+    .grid-4,
+    .contact-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    .contact-grid { grid-template-columns: 1.05fr 0.95fr; }
+
+    .card {
+      border-radius: 24px;
+      padding: 26px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: -0.02em;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 15px;
+    }
+
+    .card .icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      color: var(--accent);
+      border: 1px solid rgba(212,175,55,0.28);
+      background: rgba(212,175,55,0.08);
+      font-weight: 700;
+    }
+
+    .band {
+      margin: 24px 0 6px;
+      padding: 22px 24px;
+      border: 1px solid rgba(212,175,55,0.18);
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(212,175,55,0.08), rgba(255,255,255,0.03));
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .list div {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .list span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-top: 10px;
+      flex: 0 0 auto;
+    }
+
+    .contact-card {
+      display: grid;
+      gap: 18px;
+    }
+
+    .contact-item {
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .contact-item strong {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: #f2d98a;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .contact-item a,
+    .contact-item div:last-child {
+      color: var(--text);
+      font-size: 16px;
+      word-break: break-word;
+    }
+
+    .note {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .footer {
+      padding: 34px 0 54px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-wrap {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .contact-grid,
+      .grid-3,
+      .grid-4 {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        min-height: auto;
+        padding: 16px 0;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .hero {
+        padding-top: 48px;
+      }
     }
   </style>
 </head>
 <body>
-  <main class="card">
-    <div class="logo">Rockgate Capital</div>
-    <h1>Website under construction</h1>
-    <p>
-      We are currently building the Rockgate Capital website and will be live soon.
-      For enquiries, please contact us by email.
-    </p>
-    <div class="footer">
-      Contact: <a href="mailto:info@rockgatecapital.co.uk">info@rockgatecapital.co.uk</a>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <div class="mark">RG</div>
+        <div class="brand-text">
+          <strong>Rockgate Capital</strong>
+          <span>Mortgage & Property Finance</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-secondary" href="mailto:info@rockgatecapital.co.uk">Email Us</a>
+      </nav>
     </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Residential • Buy-to-Let • Specialist Property Finance</div>
+          <h1>Mortgage and property finance guidance, delivered with clarity and care.</h1>
+          <p class="lead">
+            Rockgate Capital offers a more personal and professional approach to residential mortgages,
+            buy-to-let borrowing, remortgaging, and specialist property finance. We focus on clear communication,
+            thoughtful guidance, and a calm client experience from start to finish.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:info@rockgatecapital.co.uk">Arrange an Initial Conversation</a>
+            <a class="btn btn-secondary" href="#services">How We Help</a>
+          </div>
+          <div class="hero-meta">
+            <div>
+              <strong>Clear</strong>
+              Straightforward conversations and well-explained options.
+            </div>
+            <div>
+              <strong>Personal</strong>
+              A boutique service shaped around your circumstances.
+            </div>
+            <div>
+              <strong>Professional</strong>
+              Calm support through an important financial decision.
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase">
+          <div class="crest">RG</div>
+          <small>Rockgate Capital</small>
+          <h2 class="section-title">Mortgage and property finance support with a calm, considered approach.</h2>
+          <p class="section-copy">
+            A professional service for clients who value clarity, responsiveness, and thoughtful guidance.
+          </p>
+
+          <div class="showcase-card">
+            <small>How We Help</small>
+            <h3>Residential, buy-to-let, remortgage, and specialist property finance.</h3>
+            <p>
+              Clear support across core mortgage and property finance requirements, delivered with care and professionalism.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">About Rockgate</div>
+          <h2 class="section-title">A premium service built around trust, care, and thoughtful guidance.</h2>
+          <p class="section-copy">
+            Rockgate Capital is designed for clients who want a more personal and more professional experience when discussing mortgage and property finance options.
+            Our focus is on clarity, service, and helping clients move forward with confidence.
+          </p>
+        </div>
+        <div class="band">
+          We aim to provide a clear, personal, and professional experience for clients seeking support with mortgage and property finance decisions.
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">Services</div>
+          <h2 class="section-title">Areas of support.</h2>
+          <p class="section-copy">
+            We support clients across the main areas of mortgage and property finance, with a focus on clarity, suitability, and professional service.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="icon">01</div>
+            <h3>Residential Mortgages</h3>
+            <p>
+              Support for home movers, first-time buyers, and clients looking for straightforward, well-explained mortgage guidance.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">02</div>
+            <h3>Buy-to-Let Mortgages</h3>
+            <p>
+              Guidance for landlords and investors seeking funding solutions for single properties or wider property portfolios.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">03</div>
+            <h3>Remortgages</h3>
+            <p>
+              Assistance with refinancing, rate reviews, restructuring, and helping clients reassess their options with clarity.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">04</div>
+            <h3>Specialist Property Finance</h3>
+            <p>
+              Support for more complex borrowing needs where a more considered and structured approach is required.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">05</div>
+            <h3>Portfolio Landlords</h3>
+            <p>
+              A more considered approach for experienced landlords who value structure, responsiveness, and a clear view of their options.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">06</div>
+            <h3>Complex Case Support</h3>
+            <p>
+              Thoughtful handling of cases that require care, patience, and professional presentation to lenders and partners.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">Approach</div>
+          <h2 class="section-title">Why clients value a boutique advice experience.</h2>
+        </div>
+
+        <div class="grid-4">
+          <article class="card">
+            <div class="icon">A</div>
+            <h3>Clarity</h3>
+            <p>Clear explanations, sensible options, and no unnecessary complexity.</p>
+          </article>
+          <article class="card">
+            <div class="icon">B</div>
+            <h3>Care</h3>
+            <p>A service style that recognises the importance of each client’s circumstances.</p>
+          </article>
+          <article class="card">
+            <div class="icon">C</div>
+            <h3>Responsiveness</h3>
+            <p>Professional communication and timely progress throughout the process.</p>
+          </article>
+          <article class="card">
+            <div class="icon">D</div>
+            <h3>Confidence</h3>
+            <p>A premium, calm, and trustworthy experience from first contact onward.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="section-label">Contact</div>
+          <h2 class="section-title">Start the conversation.</h2>
+          <p class="section-copy">
+            If you would like to discuss your mortgage or property finance requirements, please get in touch.
+          </p>
+          <div class="list">
+            <div><span></span><div>Residential mortgages</div></div>
+            <div><span></span><div>Buy-to-let finance</div></div>
+            <div><span></span><div>Remortgaging</div></div>
+            <div><span></span><div>Specialist property finance</div></div>
+          </div>
+        </div>
+
+        <div class="card contact-card">
+          <div class="contact-item">
+            <strong>Email</strong>
+            <a href="mailto:info@rockgatecapital.co.uk">info@rockgatecapital.co.uk</a>
+          </div>
+          <div class="contact-item">
+            <strong>Website</strong>
+            <div>rockgatecapital.co.uk</div>
+          </div>
+          <div class="contact-item">
+            <strong>Availability</strong>
+            <div>Initial enquiries welcome by email.</div>
+          </div>
+          
+          <a class="btn btn-primary" href="mailto:info@rockgatecapital.co.uk">Contact Rockgate Capital</a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <div>© Rockgate Capital. All rights reserved.</div>
+      <div>Professional mortgage and property finance guidance.</div>
+    </div>
+  </footer>
 </body>
 </html>
