@@ -7,32 +7,32 @@
   <meta name="description" content="Rockgate Capital provides professional mortgage and property finance guidance across residential, buy-to-let, remortgage, and specialist property finance." />
   <style>
     :root {
-      --bg: #08101c;
-      --bg-soft: #0f1b2d;
-      --panel: rgba(255,255,255,0.05);
-      --panel-strong: rgba(255,255,255,0.08);
-      --text: #f5f7fb;
-      --muted: #b8c1d1;
-      --line: rgba(255,255,255,0.12);
-      --accent: #d4af37;
-      --accent-soft: rgba(212,175,55,0.18);
+      --bg: #f6f3ec;
+      --bg-soft: #ffffff;
+      --panel: #ffffff;
+      --panel-strong: #f1ece2;
+      --text: #172332;
+      --muted: #5f6974;
+      --line: rgba(23,35,50,0.12);
+      --accent: #b6923e;
+      --accent-soft: rgba(182,146,62,0.14);
       --max: 1180px;
-      --shadow: 0 24px 60px rgba(0,0,0,0.34);
+      --shadow: 0 18px 44px rgba(16,32,51,0.10);
     }
 
     * { box-sizing: border-box; }
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 145px;
+      scroll-padding-top: 120px;
     }
 
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(212,175,55,0.12), transparent 25%),
-        radial-gradient(circle at top right, rgba(255,255,255,0.05), transparent 18%),
-        linear-gradient(180deg, #08101c 0%, #0b1220 45%, #0f1727 100%);
+        radial-gradient(circle at top left, rgba(182,146,62,0.11), transparent 28%),
+        radial-gradient(circle at top right, rgba(23,35,50,0.05), transparent 20%),
+        linear-gradient(180deg, #f8f5ee 0%, #ffffff 48%, #f5f1e9 100%);
       color: var(--text);
     }
 
@@ -51,8 +51,8 @@
       top: 0;
       z-index: 20;
       backdrop-filter: blur(14px);
-      background: rgba(8,16,28,0.72);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: rgba(15,30,49,0.96);
+      border-bottom: 1px solid rgba(182,146,62,0.22);
     }
 
     .nav {
@@ -134,13 +134,13 @@
     }
 
     .btn-secondary {
-      border-color: rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.03);
+      border-color: rgba(23,35,50,0.18);
+      background: rgba(255,255,255,0.72);
       color: var(--text);
     }
 
     .btn-secondary:hover {
-      background: rgba(255,255,255,0.07);
+      background: #ffffff;
     }
 
     .hero {
@@ -160,7 +160,7 @@
       gap: 10px;
       border: 1px solid rgba(212,175,55,0.22);
       background: rgba(212,175,55,0.08);
-      color: #f2d98a;
+      color: #947328;
       padding: 10px 14px;
       border-radius: 999px;
       font-size: 12px;
@@ -212,8 +212,8 @@
       position: relative;
       padding: 34px;
       border-radius: 30px;
-      border: 1px solid rgba(255,255,255,0.1);
-      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid rgba(182,146,62,0.24);
+      background: linear-gradient(180deg, #13263d, #0f1e31);
       box-shadow: var(--shadow);
       overflow: hidden;
     }
@@ -238,15 +238,15 @@
       font-weight: 700;
       letter-spacing: 0.08em;
       color: var(--accent);
-      background: linear-gradient(135deg, rgba(212,175,55,0.20), rgba(255,255,255,0.04));
-      border: 1px solid rgba(212,175,55,0.34);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+      background: linear-gradient(135deg, rgba(182,146,62,0.24), rgba(255,255,255,0.06));
+      border: 1px solid rgba(182,146,62,0.42);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.12);
       margin-bottom: 24px;
     }
 
     .showcase-card {
-      background: rgba(6,14,25,0.55);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(5,14,25,0.42);
+      border: 1px solid rgba(255,255,255,0.10);
       border-radius: 22px;
       padding: 22px;
       margin-top: 18px;
@@ -255,7 +255,7 @@
     .showcase-card small,
     .section-label {
       display: inline-block;
-      color: #f2d98a;
+      color: #947328;
       text-transform: uppercase;
       letter-spacing: 0.16em;
       font-size: 11px;
@@ -279,7 +279,7 @@
 
     section {
       padding: 34px 0;
-      scroll-margin-top: 145px;
+      scroll-margin-top: 120px;
     }
 
     .section-head {
@@ -373,15 +373,15 @@
     .contact-item {
       padding: 18px 20px;
       border-radius: 18px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: #f8f5ee;
+      border: 1px solid rgba(23,35,50,0.10);
     }
 
     .contact-item strong {
       display: block;
       font-size: 14px;
       margin-bottom: 6px;
-      color: #f2d98a;
+      color: #947328;
       letter-spacing: 0.06em;
       text-transform: uppercase;
     }
@@ -406,12 +406,51 @@
     }
 
     .footer-wrap {
-      border-top: 1px solid rgba(255,255,255,0.1);
+      border-top: 1px solid rgba(255,255,255,0.14);
       padding-top: 24px;
       display: flex;
       justify-content: space-between;
       gap: 20px;
       flex-wrap: wrap;
+    }
+
+
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      padding: 0;
+      border: 1px solid rgba(23,35,50,0.14);
+      border-radius: 14px;
+      background: rgba(255,255,255,0.92);
+      color: var(--text);
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      box-shadow: 0 8px 20px rgba(16,32,51,0.06);
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 21px;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+      transition: transform 0.22s ease, opacity 0.22s ease;
+    }
+
+    .menu-toggle[aria-expanded="true"] span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle[aria-expanded="true"] span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle[aria-expanded="true"] span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
     }
 
     @media (max-width: 980px) {
@@ -426,39 +465,252 @@
       .hero-grid,
       .contact-grid,
       .grid-3,
-      .grid-4 {
+      .grid-4,
+      .privacy-grid {
         grid-template-columns: 1fr;
       }
 
       .nav {
-        min-height: auto;
-        padding: 16px 0;
-        flex-direction: column;
-        align-items: flex-start;
+        min-height: 72px;
+        padding: 10px 0;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
       }
 
       .nav-links {
-        flex-wrap: wrap;
-        gap: 16px;
+        display: none;
+        grid-column: 1 / -1;
+        width: 100%;
+        padding: 10px 0 6px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+      }
+
+      .nav-links.is-open {
+        display: flex;
+      }
+
+      .nav-links a {
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: 12px;
+      }
+
+      .nav-links a:not(.btn):hover,
+      .nav-links a:not(.btn):focus-visible {
+        background: rgba(23,35,50,0.05);
+      }
+
+      .nav-links .btn {
+        margin-top: 4px;
       }
 
       .hero {
         padding-top: 48px;
       }
+
+      .brand-logo {
+        height: 42px;
+        max-width: 270px;
+      }
+
+      .crest-logo {
+        width: 88px;
+      }
     }
-  </style>
+  
+
+    /* Light Rockgate palette refinements — visual changes only */
+    .topbar .brand-text strong { color: #ffffff; }
+    .topbar .brand-text span,
+    .topbar .nav-links { color: #c8d1dc; }
+    .topbar .nav-links a:hover { color: #ffffff; }
+    .topbar .btn-secondary {
+      border-color: rgba(255,255,255,0.20);
+      background: rgba(255,255,255,0.06);
+      color: #ffffff;
+    }
+    .topbar .btn-secondary:hover { background: rgba(255,255,255,0.12); }
+
+    /* The outer feature panel is deliberately light; the inner card retains
+       Rockgate's premium navy treatment. */
+    .showcase {
+      color: var(--text);
+      background: linear-gradient(180deg, #fbfaf6 0%, #f1ede4 100%);
+      border-color: rgba(182,146,62,0.28);
+      box-shadow: 0 18px 44px rgba(16,32,51,0.09);
+    }
+
+    .showcase::before {
+      background: radial-gradient(circle, rgba(182,146,62,0.16), transparent 70%);
+    }
+
+    .showcase .crest {
+      background: linear-gradient(135deg, rgba(182,146,62,0.18), #ffffff);
+      border-color: rgba(182,146,62,0.38);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.9);
+    }
+
+    .showcase > small { color: #8b6b22; }
+    .showcase .section-title { color: var(--text); }
+    .showcase .section-copy { color: var(--muted); }
+
+    .showcase-card {
+      color: #f7f9fc;
+      background: linear-gradient(180deg, #13263d 0%, #0f1e31 100%);
+      border-color: rgba(255,255,255,0.10);
+      box-shadow: 0 16px 34px rgba(15,30,49,0.12);
+    }
+
+    .showcase-card h3 { color: #f7f9fc; }
+    .showcase-card p { color: #c8d1dc; }
+    .showcase-card small { color: #e0c36f; }
+
+    #about,
+    #approach { background: rgba(255,255,255,0.72); }
+
+    .card { background: rgba(255,255,255,0.92); }
+
+    .band {
+      background: linear-gradient(180deg, rgba(182,146,62,0.10), rgba(255,255,255,0.82));
+      border-color: rgba(182,146,62,0.24);
+    }
+
+    .contact-item strong { color: #8b6b22; }
+
+
+    .privacy-card {
+      padding: 30px;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.92);
+      box-shadow: var(--shadow);
+    }
+
+    .privacy-intro {
+      margin: 0 0 24px;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 15px;
+    }
+
+    .privacy-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .privacy-item {
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .privacy-item h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      letter-spacing: -0.01em;
+    }
+
+    .privacy-item p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.72;
+      font-size: 14px;
+    }
+
+    .privacy-updated {
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer a {
+      color: #f2d98a;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .footer a:hover { color: #ffffff; }
+
+    .footer {
+      margin-top: 34px;
+      background: #0f1e31;
+      color: #c8d1dc;
+    }
+
+    /* Logo refresh */
+    .topbar {
+      background: rgba(251,250,246,0.96);
+      border-bottom: 1px solid rgba(23,35,50,0.10);
+      box-shadow: 0 6px 18px rgba(16,32,51,0.06);
+    }
+
+    .brand {
+      gap: 0;
+    }
+
+    .brand-logo {
+      display: block;
+      height: 52px;
+      width: auto;
+      max-width: min(100%, 340px);
+    }
+
+    .topbar .nav-links {
+      color: var(--muted);
+    }
+
+    .topbar .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .topbar .btn-secondary {
+      border-color: rgba(23,35,50,0.14);
+      background: rgba(255,255,255,0.92);
+      color: var(--text);
+    }
+
+    .topbar .btn-secondary:hover {
+      background: #ffffff;
+    }
+
+    .crest-logo {
+      display: block;
+      width: 104px;
+      height: auto;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 6px 16px rgba(16,32,51,0.08));
+    }
+
+</style>
 </head>
 <body>
   <header class="topbar">
     <div class="container nav">
-      <a class="brand" href="#top">
-        <div class="mark">RG</div>
-        <div class="brand-text">
-          <strong>Rockgate Capital</strong>
-          <span>Mortgage & Property Finance</span>
-        </div>
+      <a class="brand" href="#top" aria-label="Rockgate Capital home">
+        <img class="brand-logo" src="rockgate-logo-horizontal.png" alt="Rockgate Capital" />
       </a>
-      <nav class="nav-links">
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        aria-label="Open navigation menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="primary-navigation">
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#approach">Approach</a>
@@ -500,7 +752,7 @@
         </div>
 
         <div class="showcase">
-          <div class="crest">RG</div>
+          <img class="crest-logo" src="rockgate-icon.png" alt="Rockgate Capital icon" />
           <small>Rockgate Capital</small>
           <h2 class="section-title">Mortgage and property finance support with a calm, considered approach.</h2>
           <p class="section-copy">
@@ -662,13 +914,152 @@
         </div>
       </div>
     </section>
+
+    <section id="privacy">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">Privacy</div>
+          <h2 class="section-title">Privacy policy.</h2>
+          <p class="section-copy">
+            This notice explains how information provided through this website or by email is handled.
+          </p>
+        </div>
+
+        <div class="privacy-card">
+          <p class="privacy-intro">
+            Rockgate Capital respects your privacy and aims to handle personal information fairly,
+            securely, and transparently. This website privacy notice applies to general website and
+            email enquiries. If your enquiry progresses further, you may receive a more detailed
+            privacy notice before additional personal or financial information is collected.
+          </p>
+
+          <div class="privacy-grid">
+            <div class="privacy-item">
+              <h3>Information we may collect</h3>
+              <p>
+                We may collect your name, contact details, the contents of your enquiry, and any
+                information you choose to provide by email. Basic technical and security information
+                may also be recorded by the website hosting provider.
+              </p>
+            </div>
+
+            <div class="privacy-item">
+              <h3>How we use your information</h3>
+              <p>
+                We use information to respond to enquiries, communicate with you, maintain appropriate
+                business records, protect the website, and meet legal or regulatory obligations where
+                they apply.
+              </p>
+            </div>
+
+            <div class="privacy-item">
+              <h3>Our lawful basis</h3>
+              <p>
+                Depending on the circumstances, we process information because it is necessary to take
+                steps at your request, because we have a legitimate interest in responding to and
+                managing enquiries, or because we must comply with a legal obligation.
+              </p>
+            </div>
+
+            <div class="privacy-item">
+              <h3>Sharing information</h3>
+              <p>
+                We may share information with trusted technology or professional service providers,
+                or with legal and regulatory bodies where required. We do not sell personal
+                information. Further sharing connected with a mortgage or finance application would
+                be explained before that process begins.
+              </p>
+            </div>
+
+            <div class="privacy-item">
+              <h3>Retention and security</h3>
+              <p>
+                We keep information only for as long as it is reasonably needed for the purpose for
+                which it was collected, and for any applicable legal or regulatory requirements.
+                Appropriate technical and organisational measures are used to protect it.
+              </p>
+            </div>
+
+            <div class="privacy-item">
+              <h3>Your rights</h3>
+              <p>
+                Depending on the circumstances, you may have rights to access, correct, erase, restrict,
+                transfer, or object to the use of your information. You may also complain to the
+                Information Commissioner’s Office if you remain concerned about how your information
+                has been handled.
+              </p>
+            </div>
+
+            <div class="privacy-item">
+              <h3>Cookies and website data</h3>
+              <p>
+                This version of the website does not intentionally use advertising or analytics
+                cookies. Essential technical logs may be created by the hosting provider. This notice
+                and any consent controls should be updated before optional analytics, advertising
+                pixels, or similar technologies are introduced.
+              </p>
+            </div>
+
+            <div class="privacy-item">
+              <h3>Contact us</h3>
+              <p>
+                For privacy questions or to exercise your rights, email
+                <a href="mailto:info@rockgatecapital.co.uk"><strong>info@rockgatecapital.co.uk</strong></a>.
+                Please do not send sensitive financial documents until a secure method has been agreed.
+              </p>
+            </div>
+          </div>
+
+          <p class="privacy-updated">Last updated: 3 August 2026.</p>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
     <div class="container footer-wrap">
       <div>© Rockgate Capital. All rights reserved.</div>
-      <div>Professional mortgage and property finance guidance.</div>
+      <div>Professional mortgage and property finance guidance. &nbsp;•&nbsp; <a href="#privacy">Privacy Policy</a></div>
     </div>
   </footer>
+
+  <script>
+    (() => {
+      const toggle = document.querySelector('.menu-toggle');
+      const menu = document.getElementById('primary-navigation');
+
+      if (!toggle || !menu) return;
+
+      const closeMenu = () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open navigation menu');
+        menu.classList.remove('is-open');
+      };
+
+      toggle.addEventListener('click', () => {
+        const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+        toggle.setAttribute(
+          'aria-label',
+          isOpen ? 'Open navigation menu' : 'Close navigation menu'
+        );
+        menu.classList.toggle('is-open', !isOpen);
+      });
+
+      menu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 980) closeMenu();
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeMenu();
+      });
+    })();
+  </script>
+
 </body>
 </html>
