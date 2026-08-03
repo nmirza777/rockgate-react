@@ -415,6 +415,68 @@
     }
 
 
+
+
+    .contact-bar {
+      background: #0f1e31;
+      color: #f7f9fc;
+      font-size: 14px;
+    }
+
+    .contact-bar-inner {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .contact-bar-group {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .contact-bar a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #f7f9fc;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .contact-bar a:hover,
+    .contact-bar a:focus-visible {
+      color: #e0c36f;
+    }
+
+    .contact-bar-icon {
+      color: #e0c36f;
+      font-size: 15px;
+      line-height: 1;
+    }
+
+    .contact-bar-whatsapp {
+      margin-left: auto;
+    }
+
+    .phone-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .phone-link::before {
+      content: "☎";
+      font-size: 15px;
+      line-height: 1;
+      color: var(--accent);
+    }
+
     .menu-toggle {
       display: none;
       width: 46px;
@@ -503,6 +565,10 @@
         border-radius: 12px;
       }
 
+      .nav-links .phone-link {
+        justify-content: flex-start;
+      }
+
       .nav-links a:not(.btn):hover,
       .nav-links a:not(.btn):focus-visible {
         background: rgba(23,35,50,0.05);
@@ -514,6 +580,27 @@
 
       .hero {
         padding-top: 48px;
+      }
+
+      .contact-bar-inner {
+        min-height: 40px;
+        gap: 10px;
+      }
+
+      .contact-bar-group {
+        gap: 12px;
+      }
+
+      .contact-bar-email {
+        display: none !important;
+      }
+
+      .contact-bar {
+        font-size: 13px;
+      }
+
+      .contact-bar-whatsapp {
+        margin-left: auto;
       }
 
       .brand-logo {
@@ -692,6 +779,31 @@
 </style>
 </head>
 <body>
+  <div class="contact-bar" aria-label="Rockgate Capital contact details">
+    <div class="container contact-bar-inner">
+      <div class="contact-bar-group">
+        <a class="contact-bar-email" href="mailto:info@rockgatecapital.co.uk">
+          <span class="contact-bar-icon" aria-hidden="true">✉</span>
+          <span>info@rockgatecapital.co.uk</span>
+        </a>
+        <a href="tel:+447880589888" aria-label="Call Rockgate Capital on +44 7880 589888">
+          <span class="contact-bar-icon" aria-hidden="true">☎</span>
+          <span>+44 (0) 7880 589888</span>
+        </a>
+      </div>
+      <a
+        class="contact-bar-whatsapp"
+        href="https://wa.me/447880589888"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="WhatsApp Rockgate Capital"
+      >
+        <span class="contact-bar-icon" aria-hidden="true">●</span>
+        <span>WhatsApp us</span>
+      </a>
+    </div>
+  </div>
+
   <header class="topbar">
     <div class="container nav">
       <a class="brand" href="#top" aria-label="Rockgate Capital home">
@@ -897,6 +1009,10 @@
         </div>
 
         <div class="card contact-card">
+          <div class="contact-item">
+            <strong>Telephone</strong>
+            <a href="tel:+447880589888">+44 (0) 7880 589888</a>
+          </div>
           <div class="contact-item">
             <strong>Email</strong>
             <a href="mailto:info@rockgatecapital.co.uk">info@rockgatecapital.co.uk</a>
