@@ -28,6 +28,20 @@ export const metadata = {
     description: "Specialist property finance, arranged properly.",
     type: "website",
     url: "https://rockgatecapital.co.uk/",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Rockgate Capital — Specialist property finance, arranged properly.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rockgate Capital | Specialist Property Finance",
+    description: "Specialist property finance, arranged properly.",
+    images: ["/og-image.png"],
   },
   icons: {
     icon: `${basePath}/favicon.svg`,
