@@ -18,7 +18,7 @@ export default function Home() {
             </p>
             <div className="hero__actions">
               <a className="button button--accent" href="#contact">
-                Start an enquiry
+                Contact us
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     fill="currentColor"
@@ -249,7 +249,7 @@ export default function Home() {
           </div>
           <div className="cta__actions">
             <a className="button button--accent" href="#contact">
-              Start an enquiry
+              Contact us
             </a>
             <a className="button button--outline" href={telHref()}>
               Call <span>{siteConfig.telephoneDisplay}</span>
