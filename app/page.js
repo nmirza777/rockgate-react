@@ -32,10 +32,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div
-            className="hero-art"
-            aria-label="Abstract architectural illustration representing property finance"
-          >
+          <div className="hero-art">
             <div className="hero-art__architecture" aria-hidden="true">
               <div className="hero-art__roof"></div>
               <div className="hero-art__building"></div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import BrandMark from "./BrandMark";
 import { siteConfig, mailtoHref, telHref, whatsappHref } from "@/lib/siteConfig";
@@ -14,9 +14,12 @@ const NAV_LINKS = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const toggleButtonRef = useRef(null);
+  const firstLinkRef = useRef(null);
 
   useEffect(() => {
     document.body.classList.toggle("menu-open", menuOpen);
+    if (menuOpen) firstLinkRef.current?.focus();
   }, [menuOpen]);
 
   useEffect(() => {
@@ -24,7 +27,10 @@ export default function Header() {
       if (window.innerWidth > 1020) setMenuOpen(false);
     };
     const handleKeydown = (event) => {
-      if (event.key === "Escape") setMenuOpen(false);
+      if (event.key === "Escape" && menuOpen) {
+        setMenuOpen(false);
+        toggleButtonRef.current?.focus();
+      }
     };
     window.addEventListener("resize", handleResize);
     document.addEventListener("keydown", handleKeydown);
@@ -32,7 +38,7 @@ export default function Header() {
       window.removeEventListener("resize", handleResize);
       document.removeEventListener("keydown", handleKeydown);
     };
-  }, []);
+  }, [menuOpen]);
 
   return (
     <>
@@ -82,6 +88,7 @@ export default function Header() {
           </Link>
 
           <button
+            ref={toggleButtonRef}
             className="menu-toggle"
             type="button"
             aria-expanded={menuOpen}
@@ -99,8 +106,13 @@ export default function Header() {
             id="primary-navigation"
             aria-label="Primary navigation"
           >
-            {NAV_LINKS.map((link) => (
-              <Link key={link.href} href={link.href} onClick={() => setMenuOpen(false)}>
+            {NAV_LINKS.map((link, index) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                ref={index === 0 ? firstLinkRef : undefined}
+                onClick={() => setMenuOpen(false)}
+              >
                 {link.label}
               </Link>
             ))}
