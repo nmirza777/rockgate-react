@@ -2,6 +2,7 @@ import { Newsreader, Archivo } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { basePath } from "@/lib/basePath";
 
 const newsreader = Newsreader({
   subsets: ["latin"],
@@ -29,7 +30,7 @@ export const metadata = {
     url: "https://rockgatecapital.co.uk/",
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: `${basePath}/favicon.svg`,
   },
 };
 

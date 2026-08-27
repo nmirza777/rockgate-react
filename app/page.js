@@ -1,4 +1,7 @@
+import Image from "next/image";
+import Link from "next/link";
 import { siteConfig, telHref } from "@/lib/siteConfig";
+import { basePath } from "@/lib/basePath";
 
 export default function Home() {
   return (
@@ -180,8 +183,8 @@ export default function Home() {
       <section className="content-section adviser">
         <div className="container adviser__grid">
           <div className="adviser__photo">
-            <img
-              src="/advisor.jpg"
+            <Image
+              src={`${basePath}/advisor.jpg`}
               alt="Naveed Mirza, Founder and Director of Rockgate Capital"
               loading="lazy"
               width={1122}
@@ -270,7 +273,7 @@ export default function Home() {
             </p>
             <p className="privacy-note">
               We use enquiry information to respond to you and assess the next step. Read our{" "}
-              <a href="/privacy">Privacy Policy</a>.
+              <Link href="/privacy">Privacy Policy</Link>.
             </p>
           </div>
 
