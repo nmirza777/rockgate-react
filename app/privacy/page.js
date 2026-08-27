@@ -1,5 +1,5 @@
 import styles from "./privacy.module.css";
-import { siteConfig, mailtoHref } from "@/lib/siteConfig";
+import { siteConfig, mailtoHref, getComplaintsStatement } from "@/lib/siteConfig";
 
 export const metadata = {
   title: "Privacy Policy | Rockgate Capital",
@@ -227,40 +227,18 @@ export default function PrivacyPolicy() {
                 and complaint service are available on the ICO website.
               </p>
 
-              {/* Standard AR complaints-handling / FOS wording — Connect IFA Ltd to confirm exact required text before launch. */}
-              <h3 className={styles.subHeading}>Complaints about our advice or service</h3>
+              {/* Complaints wording approved by Connect IFA Ltd for the ESIS template (supplied 27 August 2026) — do not alter without checking with Connect first. */}
+              <h3 className={styles.subHeading}>What to do if you have a complaint</h3>
+              <p>{getComplaintsStatement()}</p>
               <p>
-                If you are unhappy with our advice or service, please tell us as soon as possible so
-                we can try to put things right. Complaints can be made by telephone, email or in
-                writing using the contact details above.
-              </p>
-              <p>
-                We will acknowledge your complaint promptly and investigate it fairly. If we cannot
-                resolve matters straightaway, we will keep you updated on our progress and aim to
-                provide our final response within eight weeks of receiving your complaint.
-              </p>
-              <p>
-                If you remain dissatisfied with our final response, or if eight weeks pass without
-                one, you may be entitled to refer your complaint, free of charge, to the Financial
-                Ombudsman Service:
-              </p>
-              <ul>
-                <li>
-                  Website:{" "}
-                  <a
-                    href="https://www.financial-ombudsman.org.uk"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    www.financial-ombudsman.org.uk
-                  </a>
-                </li>
-                <li>Telephone: 0800 023 4567</li>
-                <li>Post: Financial Ombudsman Service, Exchange Tower, London E14 9SR</li>
-              </ul>
-              <p>
-                Referring a complaint to the Financial Ombudsman Service does not affect your right
-                to take legal action.
+                Financial Ombudsman Service:{" "}
+                <a
+                  href="https://www.financial-ombudsman.org.uk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  www.financial-ombudsman.org.uk
+                </a>
               </p>
 
               <p>

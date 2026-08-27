@@ -61,11 +61,10 @@ export default function Footer() {
             Financial Conduct Authority does not regulate some forms of buy-to-let, commercial and
             bridging finance.
           </p>
-          {/* Complaints wording is standard AR boilerplate — Connect IFA Ltd to confirm before this leaves development. */}
           <p>
-            If you wish to complain about our advice or service, please contact us using the
-            details above. A summary of our complaints handling procedure, including your right to
-            refer an unresolved complaint to the Financial Ombudsman Service, is set out in our{" "}
+            If you wish to complain about our advice or service, details of how to do so — including
+            how to contact {siteConfig.principalName}&apos;s Compliance Department and your right to
+            refer the matter to the Financial Ombudsman Service — are set out in our{" "}
             <Link href="/privacy#complaints">Privacy Policy</Link>.
           </p>
         </div>
