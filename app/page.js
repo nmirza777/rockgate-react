@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { siteConfig, telHref } from "@/lib/siteConfig";
 import { basePath } from "@/lib/basePath";
 
@@ -270,7 +269,7 @@ export default function Home() {
             </p>
             <p className="privacy-note">
               We use enquiry information to respond to you and assess the next step. Read our{" "}
-              <Link href="/privacy">Privacy Policy</Link>.
+              <a href={`${basePath}/privacy`}>Privacy Policy</a>.
             </p>
           </div>
 

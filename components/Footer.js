@@ -1,6 +1,6 @@
-import Link from "next/link";
 import BrandMark from "./BrandMark";
 import { siteConfig, getRegulatoryStatement, mailtoHref, telHref, whatsappHref } from "@/lib/siteConfig";
+import { basePath } from "@/lib/basePath";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,13 +10,13 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <Link className="brand" href="/#top" aria-label="Rockgate Capital home">
+            <a className="brand" href={`${basePath}/#top`} aria-label="Rockgate Capital home">
               <BrandMark className="brand__mark" fill="#F7F4EE" />
               <span className="brand__name">
                 <span className="brand__rockgate">Rockgate</span>
                 <span className="brand__capital">Capital</span>
               </span>
-            </Link>
+            </a>
             <p>
               Mortgage advice and specialist property finance across residential mortgages,
               buy-to-let, bridging and commercial finance.
@@ -25,18 +25,18 @@ export default function Footer() {
 
           <div className="footer-col">
             <h3>Services</h3>
-            <Link href="/#services">Residential</Link>
-            <Link href="/#services">Buy-to-let</Link>
-            <Link href="/#services">Bridging</Link>
-            <Link href="/#services">Commercial</Link>
+            <a href={`${basePath}/#services`}>Residential</a>
+            <a href={`${basePath}/#services`}>Buy-to-let</a>
+            <a href={`${basePath}/#services`}>Bridging</a>
+            <a href={`${basePath}/#services`}>Commercial</a>
           </div>
 
           <div className="footer-col">
             <h3>Company</h3>
-            <Link href="/#about">About</Link>
-            <Link href="/#approach">Approach</Link>
-            <Link href="/#contact">Contact</Link>
-            <Link href="/privacy">Privacy Policy</Link>
+            <a href={`${basePath}/#about`}>About</a>
+            <a href={`${basePath}/#approach`}>Approach</a>
+            <a href={`${basePath}/#contact`}>Contact</a>
+            <a href={`${basePath}/privacy`}>Privacy Policy</a>
           </div>
 
           <div className="footer-col">
@@ -65,7 +65,7 @@ export default function Footer() {
             If you wish to complain about our advice or service, details of how to do so — including
             how to contact {siteConfig.principalName}&apos;s Compliance Department and your right to
             refer the matter to the Financial Ombudsman Service — are set out in our{" "}
-            <Link href="/privacy#complaints">Privacy Policy</Link>.
+            <a href={`${basePath}/privacy#complaints`}>Privacy Policy</a>.
           </p>
         </div>
 
@@ -74,7 +74,7 @@ export default function Footer() {
             © {currentYear} {siteConfig.companyName}. All rights reserved.
           </span>
           <div className="footer-bottom__links">
-            <Link href="/privacy">Privacy Policy</Link>
+            <a href={`${basePath}/privacy`}>Privacy Policy</a>
             <a href={siteConfig.principalRegisterUrl} target="_blank" rel="noopener noreferrer">
               Principal FCA Register entry
             </a>

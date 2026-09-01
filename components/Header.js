@@ -1,15 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import BrandMark from "./BrandMark";
 import { siteConfig, mailtoHref, telHref, whatsappHref } from "@/lib/siteConfig";
+import { basePath } from "@/lib/basePath";
 
 const NAV_LINKS = [
-  { href: "/#about", label: "About" },
-  { href: "/#services", label: "Services" },
-  { href: "/#approach", label: "Approach" },
-  { href: "/#contact", label: "Contact" },
+  { href: `${basePath}/#about`, label: "About" },
+  { href: `${basePath}/#services`, label: "Services" },
+  { href: `${basePath}/#approach`, label: "Approach" },
+  { href: `${basePath}/#contact`, label: "Contact" },
 ];
 
 export default function Header() {
@@ -79,13 +79,13 @@ export default function Header() {
 
       <header className="site-header">
         <div className="container nav">
-          <Link className="brand" href="/#top" aria-label="Rockgate Capital home">
+          <a className="brand" href={`${basePath}/#top`} aria-label="Rockgate Capital home">
             <BrandMark className="brand__mark" fill="#0F241F" />
             <span className="brand__name">
               <span className="brand__rockgate">Rockgate</span>
               <span className="brand__capital">Capital</span>
             </span>
-          </Link>
+          </a>
 
           <button
             ref={toggleButtonRef}
@@ -107,18 +107,22 @@ export default function Header() {
             aria-label="Primary navigation"
           >
             {NAV_LINKS.map((link, index) => (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
                 ref={index === 0 ? firstLinkRef : undefined}
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
-            <Link className="button button--accent" href="/#contact" onClick={() => setMenuOpen(false)}>
+            <a
+              className="button button--accent"
+              href={`${basePath}/#contact`}
+              onClick={() => setMenuOpen(false)}
+            >
               Enquire
-            </Link>
+            </a>
           </nav>
         </div>
       </header>
