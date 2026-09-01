@@ -551,6 +551,8 @@ section.content-section {
   position: relative;
   min-height: 330px;
   padding: 34px 30px;
+  display: flex;
+  flex-direction: column;
   background: var(--white);
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -586,14 +588,14 @@ section.content-section {
 
 .service-card p {
   margin: 0;
+  flex: 1;
   color: var(--muted);
   font-size: 15px;
 }
 
 .service-card__link {
-  position: absolute;
-  left: 30px;
-  bottom: 28px;
+  display: inline-block;
+  margin-top: 20px;
   color: var(--bronze);
   font-size: 13px;
   font-weight: 600;
@@ -751,11 +753,17 @@ section.content-section {
 }
 
 .adviser__role {
-  margin: 8px 0 22px;
+  margin: 8px 0 6px;
   color: var(--bronze);
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.02em;
+}
+
+.adviser__credential {
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 13px;
 }
 
 .adviser__content > p {
@@ -928,6 +936,13 @@ section.content-section {
   margin: 24px 0 0;
   font-size: 13px;
   line-height: 1.75;
+}
+
+.footer-fiba {
+  display: block;
+  width: 170px;
+  height: auto;
+  margin-top: 32px;
 }
 
 .footer-col h3 {

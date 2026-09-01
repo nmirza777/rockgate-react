@@ -191,6 +191,9 @@ export default function Home() {
             <div className="section-label">Who you&apos;re working with</div>
             <h2 className="section-title">Naveed Mirza CeMAP</h2>
             <p className="adviser__role">Founder &amp; Director</p>
+            <p className="adviser__credential">
+              CeMAP qualified through the London Institute of Banking &amp; Finance (LIBF)
+            </p>
             <p>
               Naveed founded Rockgate Capital after 25 years in property development, bringing that
               hands-on experience of the market to every case we take on.
