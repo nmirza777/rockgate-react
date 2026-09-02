@@ -938,11 +938,21 @@ section.content-section {
   line-height: 1.75;
 }
 
+.footer-fiba-wrap {
+  margin-top: 32px;
+}
+
 .footer-fiba {
   display: block;
   width: 170px;
   height: auto;
-  margin-top: 32px;
+}
+
+.footer-fiba__caption {
+  margin: 10px 0 0;
+  color: #93a29c;
+  font-size: 11px;
+  letter-spacing: 0.04em;
 }
 
 .footer-col h3 {

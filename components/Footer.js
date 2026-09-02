@@ -22,13 +22,16 @@ export default function Footer() {
               Mortgage advice and specialist property finance across residential mortgages,
               buy-to-let, bridging and commercial finance.
             </p>
-            <img
-              className="footer-fiba"
-              src={`${basePath}/fiba-member.png`}
-              alt="FIBA Member — Financial Intermediary & Broker Association"
-              width={170}
-              height={62}
-            />
+            <div className="footer-fiba-wrap">
+              <img
+                className="footer-fiba"
+                src={`${basePath}/fiba-member.png`}
+                alt="FIBA Member — Financial Intermediary & Broker Association"
+                width={170}
+                height={62}
+              />
+              <p className="footer-fiba__caption">Financial Intermediary &amp; Broker Association</p>
+            </div>
           </div>
 
           <div className="footer-col">
