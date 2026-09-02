@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ObfuscatedEmail from "@/components/ObfuscatedEmail";
 import { siteConfig, telHref } from "@/lib/siteConfig";
 import { basePath } from "@/lib/basePath";
 
@@ -285,9 +286,7 @@ export default function Home() {
             </div>
             <div className="contact-panel__item">
               <div className="contact-panel__label">Email</div>
-              <a className="contact-panel__value" href={`mailto:${siteConfig.email}`}>
-                <span>{siteConfig.email}</span>
-              </a>
+              <ObfuscatedEmail className="contact-panel__value" />
             </div>
             <div className="contact-panel__item">
               <div className="contact-panel__label">WhatsApp</div>

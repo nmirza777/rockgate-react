@@ -1,5 +1,6 @@
 import BrandMark from "./BrandMark";
-import { siteConfig, getRegulatoryStatement, mailtoHref, telHref, whatsappHref } from "@/lib/siteConfig";
+import ObfuscatedEmail from "./ObfuscatedEmail";
+import { siteConfig, getRegulatoryStatement, telHref, whatsappHref } from "@/lib/siteConfig";
 import { basePath } from "@/lib/basePath";
 
 export default function Footer() {
@@ -48,7 +49,7 @@ export default function Footer() {
 
           <div className="footer-col">
             <h3>Contact</h3>
-            <a href={mailtoHref()}>{siteConfig.email}</a>
+            <ObfuscatedEmail />
             <a href={telHref()}>{siteConfig.telephoneDisplay}</a>
             <a href={whatsappHref()} target="_blank" rel="noopener noreferrer">
               WhatsApp us

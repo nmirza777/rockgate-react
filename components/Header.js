@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import BrandMark from "./BrandMark";
-import { siteConfig, mailtoHref, telHref, whatsappHref } from "@/lib/siteConfig";
+import ObfuscatedEmail from "./ObfuscatedEmail";
+import { siteConfig, telHref, whatsappHref } from "@/lib/siteConfig";
 import { basePath } from "@/lib/basePath";
 
 const NAV_LINKS = [
@@ -45,15 +46,17 @@ export default function Header() {
       <div className="contact-bar">
         <div className="container contact-bar__inner">
           <div className="contact-bar__group">
-            <a className="contact-link contact-bar__email" href={mailtoHref()}>
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  fill="currentColor"
-                  d="M2 5h20v14H2V5Zm2 2v.5l8 5.2 8-5.2V7H4Zm16 10V9.9l-8 5.1-8-5.1V17h16Z"
-                />
-              </svg>
-              <span>{siteConfig.email}</span>
-            </a>
+            <ObfuscatedEmail
+              className="contact-link contact-bar__email"
+              iconBefore={
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M2 5h20v14H2V5Zm2 2v.5l8 5.2 8-5.2V7H4Zm16 10V9.9l-8 5.1-8-5.1V17h16Z"
+                  />
+                </svg>
+              }
+            />
             <a className="contact-link" href={telHref()}>
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path

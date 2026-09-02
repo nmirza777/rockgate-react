@@ -1013,6 +1013,28 @@ section.content-section {
 
   .menu-toggle {
     display: inline-flex;
+    animation: menu-toggle-bounce 3s ease-in-out infinite;
+  }
+
+  .menu-toggle[aria-expanded="true"] {
+    animation: none;
+  }
+
+  @keyframes menu-toggle-bounce {
+    0%,
+    55%,
+    100% {
+      transform: translateY(0);
+    }
+    15% {
+      transform: translateY(-6px);
+    }
+    30% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-3px);
+    }
   }
 
   .nav__links {

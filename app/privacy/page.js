@@ -1,5 +1,6 @@
 import styles from "./privacy.module.css";
-import { siteConfig, mailtoHref, getComplaintsStatement } from "@/lib/siteConfig";
+import ObfuscatedEmail from "@/components/ObfuscatedEmail";
+import { siteConfig, getComplaintsStatement } from "@/lib/siteConfig";
 
 export const metadata = {
   title: "Privacy Policy | Rockgate Capital",
@@ -60,7 +61,7 @@ export default function PrivacyPolicy() {
                 {siteConfig.companyNumber}. Registered office: {siteConfig.registeredOffice}.
               </p>
               <p>
-                Privacy enquiries can be sent to <a href={mailtoHref()}>{siteConfig.email}</a>.
+                Privacy enquiries can be sent to <ObfuscatedEmail />.
               </p>
             </section>
 
@@ -196,7 +197,7 @@ export default function PrivacyPolicy() {
               </div>
               <p>
                 These rights are not absolute and may be subject to exemptions. To make a request,
-                email <a href={mailtoHref()}>{siteConfig.email}</a>. We may need to verify your
+                email <ObfuscatedEmail />. We may need to verify your
                 identity before acting on a request.
               </p>
             </section>
@@ -219,7 +220,7 @@ export default function PrivacyPolicy() {
               <h2 className={styles.sectionHeading}>10. Questions and complaints</h2>
               <p>
                 Please contact us first if you have a question or concern about how personal
-                information has been handled: <a href={mailtoHref()}>{siteConfig.email}</a>.
+                information has been handled: <ObfuscatedEmail />.
               </p>
               <p>
                 You also have the right to complain to the Information Commissioner&apos;s Office,
