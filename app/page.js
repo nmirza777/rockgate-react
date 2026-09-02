@@ -43,7 +43,6 @@ export default function Home() {
                 <strong>Finance that opens doors.</strong>
                 <span>Professional advice and support from first conversation to completion.</span>
               </div>
-              <div className="hero-art__status">Appointed Representative</div>
             </div>
           </div>
         </div>

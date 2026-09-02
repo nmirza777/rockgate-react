@@ -467,17 +467,6 @@ button {
   font-size: 13px;
 }
 
-.hero-art__status {
-  padding: 8px 11px;
-  border: 1px solid rgba(199, 154, 92, 0.58);
-  color: var(--bronze-light);
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-align: center;
-  flex: 0 0 auto;
-}
-
 .trust-strip {
   margin-top: clamp(54px, 7vw, 86px);
   background: var(--white);
