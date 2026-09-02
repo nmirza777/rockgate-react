@@ -334,7 +334,8 @@ button {
   max-width: 760px;
   margin-top: 18px;
   font-size: clamp(44px, 6.2vw, 74px);
-  line-height: 0.99;
+  font-weight: 500;
+  line-height: 1.06;
 }
 
 .hero__copy {
