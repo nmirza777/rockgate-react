@@ -132,7 +132,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="content-section approach" id="about">
+      <section className="content-section approach">
         <div className="container approach__grid">
           <div className="approach-visual" aria-hidden="true">
             <div className="approach-visual__caption">The Rockgate approach</div>
@@ -177,7 +177,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="content-section adviser">
+      <section className="content-section adviser" id="about">
         <div className="container adviser__grid">
           <div className="adviser__photo">
             <Image
