@@ -893,6 +893,27 @@ section.content-section {
   overflow-wrap: anywhere;
 }
 
+.calendly-block {
+  margin-top: 64px;
+  padding-top: 44px;
+  border-top: 1px solid var(--line);
+}
+
+.calendly-block__title {
+  margin: 10px 0 28px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 400;
+}
+
+.calendly-inline-widget {
+  width: 100%;
+  background: var(--white);
+  border: 1px solid var(--stone-200);
+  box-shadow: var(--shadow);
+}
+
 .privacy-note {
   margin-top: 24px;
   color: var(--muted);

@@ -148,6 +148,13 @@ export default function PrivacyPolicy() {
                 WhatsApp links only transfer you to WhatsApp when you choose to click them.
                 WhatsApp&apos;s own privacy terms then apply to that service.
               </p>
+              <p>
+                The contact section of this website embeds a Calendly booking calendar so you can
+                arrange a call directly. Calendly may set cookies and process technical information
+                (such as IP address and browser details) to provide that booking service, and if you
+                book a call you will share your name, email address and chosen time with them.
+                Calendly&apos;s own privacy policy applies to that processing.
+              </p>
             </section>
 
             <section className={styles.policySection} id="retention">
@@ -205,14 +212,16 @@ export default function PrivacyPolicy() {
             <section className={styles.policySection} id="cookies">
               <h2 className={styles.sectionHeading}>9. Cookies and website data</h2>
               <p>
-                This website does not intentionally set analytics, advertising or profiling
-                cookies. Essential server and security logs may still be created by the hosting
-                provider.
+                This website does not set its own analytics, advertising or profiling cookies. The
+                embedded Calendly booking calendar in the contact section is the one exception —
+                see the International Transfers section above — and may set cookies of its own to
+                provide that service. Essential server and security logs may still be created by
+                the hosting provider.
               </p>
               <p>
-                If analytics, advertising pixels, embedded booking tools or other non-essential
-                technologies are added later, this policy and any necessary cookie consent controls
-                must be updated before those technologies are enabled.
+                If analytics, advertising pixels or other non-essential technologies are added
+                later, this policy and any necessary cookie consent controls must be updated before
+                those technologies are enabled.
               </p>
             </section>
 

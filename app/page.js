@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Script from "next/script";
 import ObfuscatedEmail from "@/components/ObfuscatedEmail";
 import { siteConfig, telHref } from "@/lib/siteConfig";
 import { basePath } from "@/lib/basePath";
@@ -303,12 +304,27 @@ export default function Home() {
             <div className="contact-panel__item">
               <div className="contact-panel__label">Availability</div>
               <div className="contact-panel__value">
-                Initial enquiries welcome by telephone, email or WhatsApp.
+                Initial enquiries welcome by telephone, email or WhatsApp, or book a call directly
+                below.
               </div>
             </div>
           </div>
         </div>
+
+        <div className="container">
+          <div className="calendly-block">
+            <div className="section-label">Book a call</div>
+            <h3 className="calendly-block__title">Prefer to pick a time yourself?</h3>
+            <div
+              className="calendly-inline-widget"
+              data-url="https://calendly.com/naveed-rockgatecapital/30min?background_color=f7f4ee&text_color=0f241f&primary_color=a9773f"
+              style={{ minWidth: "320px", height: "700px" }}
+            />
+          </div>
+        </div>
       </section>
+
+      <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
     </main>
   );
 }
