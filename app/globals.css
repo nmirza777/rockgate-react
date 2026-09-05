@@ -909,9 +909,10 @@ section.content-section {
 
 .calendly-inline-widget {
   width: 100%;
-  background: var(--white);
-  border: 1px solid var(--stone-200);
-  box-shadow: var(--shadow);
+}
+
+.calendly-inline-widget iframe {
+  display: block;
 }
 
 .privacy-note {

@@ -318,7 +318,7 @@ export default function Home() {
             <div
               className="calendly-inline-widget"
               data-url="https://calendly.com/naveed-rockgatecapital/30min?background_color=f7f4ee&text_color=0f241f&primary_color=a9773f"
-              style={{ minWidth: "320px", height: "700px" }}
+              style={{ minWidth: "320px", height: "660px" }}
             />
           </div>
         </div>
