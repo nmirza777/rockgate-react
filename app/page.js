@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Script from "next/script";
 import ObfuscatedEmail from "@/components/ObfuscatedEmail";
 import { siteConfig, telHref } from "@/lib/siteConfig";
 import { basePath } from "@/lib/basePath";
@@ -317,7 +316,7 @@ export default function Home() {
             <h3 className="calendly-block__title">Prefer to pick a time yourself?</h3>
             <div
               className="calendly-inline-widget"
-              data-url="https://calendly.com/naveed-rockgatecapital/30min?background_color=f7f4ee&text_color=0f241f&primary_color=a9773f"
+              data-url={siteConfig.calendlyUrl}
               style={{ minWidth: "320px", height: "660px" }}
             />
           </div>
@@ -329,8 +328,6 @@ export default function Home() {
           <p>Your property may be repossessed if you do not keep up repayments on your mortgage.</p>
         </div>
       </section>
-
-      <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
     </main>
   );
 }

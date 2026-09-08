@@ -1,7 +1,9 @@
 import { Newsreader, Archivo } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import LeadAssistant from "@/components/LeadAssistant";
 import { basePath } from "@/lib/basePath";
 import { siteConfig } from "@/lib/siteConfig";
 
@@ -63,6 +65,8 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <LeadAssistant />
+        <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
       </body>
     </html>
   );
