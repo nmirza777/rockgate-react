@@ -702,6 +702,10 @@ section.content-section {
   background: var(--stone);
 }
 
+.adviser__content .section-title {
+  text-wrap: balance;
+}
+
 .adviser__grid {
   display: grid;
   grid-template-columns: minmax(200px, 260px) minmax(0, 1fr);
