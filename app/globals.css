@@ -760,9 +760,20 @@ section.content-section {
   font-size: 13px;
 }
 
+.adviser__badge-link {
+  display: inline-block;
+  margin: 0 0 22px;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.adviser__badge-link:hover,
+.adviser__badge-link:focus-visible {
+  transform: translateY(-2px);
+}
+
 .adviser__badge {
   display: block;
-  margin: 0 0 22px;
   border-radius: 8px;
 }
 
