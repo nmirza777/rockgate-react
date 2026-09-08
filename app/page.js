@@ -194,6 +194,14 @@ export default function Home() {
             <p className="adviser__credential">
               CeMAP qualified through the London Institute of Banking &amp; Finance (LIBF)
             </p>
+            <Image
+              className="adviser__badge"
+              src={`${basePath}/libf-badge.png`}
+              alt="LIBF Certified Mortgage Adviser badge"
+              loading="lazy"
+              width={84}
+              height={84}
+            />
             <p>
               Naveed founded Rockgate Capital after 25 years in property development, as a landlord
               and developer in his own right — heavy rebuilds, large extensions and renewable
