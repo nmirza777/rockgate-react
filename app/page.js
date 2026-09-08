@@ -189,7 +189,7 @@ export default function Home() {
           </div>
           <div className="adviser__content">
             <div className="section-label">Who you&apos;re working with</div>
-            <h2 className="section-title">Naveed Mirza BEng, CeMAP</h2>
+            <h2 className="section-title">Naveed Mirza CeMAP, BEng</h2>
             <p className="adviser__role">Founder &amp; Director</p>
             <p className="adviser__credential">
               CeMAP qualified through the London Institute of Banking &amp; Finance (LIBF)
