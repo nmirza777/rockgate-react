@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ObfuscatedEmail from "@/components/ObfuscatedEmail";
+import CalendlyBooking from "@/components/CalendlyBooking";
 import { siteConfig, telHref } from "@/lib/siteConfig";
 import { basePath } from "@/lib/basePath";
 
@@ -330,11 +331,7 @@ export default function Home() {
           <div className="calendly-block">
             <div className="section-label">Book a call</div>
             <h3 className="calendly-block__title">Prefer to pick a time yourself?</h3>
-            <div
-              className="calendly-inline-widget"
-              data-url={siteConfig.calendlyUrl}
-              style={{ minWidth: "320px", height: "660px" }}
-            />
+            <CalendlyBooking />
           </div>
         </div>
       </section>

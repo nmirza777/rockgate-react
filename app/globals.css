@@ -928,12 +928,29 @@ section.content-section {
   font-weight: 400;
 }
 
-.calendly-inline-widget {
+.calendly-inline-widget,
+.calendly-widget-embed {
   width: 100%;
 }
 
-.calendly-inline-widget iframe {
+.calendly-inline-widget iframe,
+.calendly-widget-embed iframe {
   display: block;
+}
+
+.calendly-gate {
+  max-width: 480px;
+  padding: 28px;
+  border: 1px solid var(--stone-200);
+  border-radius: 8px;
+  background: var(--stone);
+}
+
+.calendly-gate__caveat {
+  margin: 0 0 20px;
+  color: var(--body);
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 .privacy-note {
@@ -1434,6 +1451,35 @@ section.content-section {
 .lead-assistant__form .button {
   margin-top: 4px;
   width: 100%;
+}
+
+.lead-assistant__caveat {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+}
+
+.lead-assistant__caveat p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--body);
+  line-height: 1.6;
+}
+
+.lead-assistant__caveat .button {
+  width: 100%;
+}
+
+.lead-assistant__caveat-back {
+  align-self: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.lead-assistant__caveat-back:hover {
+  color: var(--ink);
 }
 
 .lead-assistant__privacy-note {
