@@ -1008,6 +1008,19 @@ section.content-section {
   color: var(--white);
 }
 
+.footer-risk-warning {
+  margin-top: 40px;
+  padding: 18px 24px;
+  border: 1px solid var(--bronze-light);
+  border-radius: 4px;
+  background: rgba(199, 154, 92, 0.08);
+  color: var(--white);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+
 .regulatory {
   margin-top: 48px;
   padding-top: 26px;

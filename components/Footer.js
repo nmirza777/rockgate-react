@@ -8,6 +8,7 @@ import {
   getCommissionDisclosureStatement,
   getFeesForAdviceStatement,
   getExternalLinkCaveat,
+  getComplaintsStatement,
   telHref,
   whatsappHref,
 } from "@/lib/siteConfig";
@@ -25,7 +26,7 @@ export default function Footer() {
               <BrandMark className="brand__mark" fill="#F7F4EE" />
               <span className="brand__name">
                 <span className="brand__rockgate">Rockgate</span>
-                <span className="brand__capital">Capital</span>
+                <span className="brand__capital">Capital Ltd</span>
               </span>
             </a>
             <p>
@@ -70,6 +71,10 @@ export default function Footer() {
           </div>
         </div>
 
+        <p className="footer-risk-warning">
+          Your property may be repossessed if you do not keep up repayments on your mortgage.
+        </p>
+
         <div className="regulatory">
           <p>{getRegulatoryStatement()}</p>
           <p>
@@ -86,11 +91,16 @@ export default function Footer() {
           <p>{getFeesForAdviceStatement()}</p>
           <p>{getCommissionDisclosureStatement()}</p>
           <p>{getExternalLinkCaveat()}</p>
+          <p>{getComplaintsStatement()}</p>
           <p>
-            If you wish to complain about our advice or service, details of how to do so — including
-            how to contact {siteConfig.principalName}&apos;s Compliance Department and your right to
-            refer the matter to the Financial Ombudsman Service — are set out in our{" "}
-            <a href={`${basePath}/privacy#complaints`}>Privacy Policy</a>.
+            Financial Ombudsman Service:{" "}
+            <a
+              href="https://www.financial-ombudsman.org.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              www.financial-ombudsman.org.uk
+            </a>
           </p>
         </div>
 

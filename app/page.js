@@ -338,12 +338,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <section className="risk-warning">
-        <div className="container">
-          <p>Your property may be repossessed if you do not keep up repayments on your mortgage.</p>
-        </div>
-      </section>
     </main>
   );
 }

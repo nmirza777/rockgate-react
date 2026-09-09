@@ -86,7 +86,7 @@ export default function Header() {
             <BrandMark className="brand__mark" fill="#0F241F" />
             <span className="brand__name">
               <span className="brand__rockgate">Rockgate</span>
-              <span className="brand__capital">Capital</span>
+              <span className="brand__capital">Capital Ltd</span>
             </span>
           </a>
 
