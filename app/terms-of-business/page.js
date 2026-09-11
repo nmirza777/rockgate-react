@@ -110,10 +110,12 @@ export default function TermsOfBusiness() {
                 its progress, and keep you updated until the lender issues a formal loan offer.
               </p>
               <p>
-                <strong>Mortgage offer stage.</strong> We usually charge a fee of £999. This fee
-                becomes payable once we have successfully secured your mortgage offer from the
-                lender. Should more specialist requirements apply, we will advise you in writing if
-                a different fee applies before proceeding with an application.
+                <strong>Mortgage offer stage.</strong> There will be a fee for arranging your
+                mortgage; the precise amount depends on your circumstances, and we estimate it to
+                be £999 for straightforward cases. This fee becomes payable once we have
+                successfully secured your mortgage offer from the lender. For more complex cases —
+                including portfolio landlords and complex shareholding structures — we will confirm
+                a different fee in writing before you proceed with an application.
               </p>
               <p>
                 Where we recommend a product from a lender who wishes to deal directly with you,
