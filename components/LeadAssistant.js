@@ -176,7 +176,10 @@ export default function LeadAssistant() {
               </button>
               <p className="lead-assistant__privacy-note">
                 We&apos;ll only use these details to arrange your call. Read our{" "}
-                <a href={`${basePath}/privacy`}>Privacy Policy</a>.
+                <a href={`${basePath}/privacy`}>Privacy Policy</a>. Before proceeding, please also
+                read our{" "}
+                <a href={`${basePath}/terms-of-business`}>Terms of Business</a>, which sets out
+                our services and fees.
               </p>
             </form>
           )}

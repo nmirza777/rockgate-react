@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { siteConfig, getExternalLinkCaveat } from "@/lib/siteConfig";
+import { basePath } from "@/lib/basePath";
 
 export default function CalendlyBooking() {
   const [confirmed, setConfirmed] = useState(false);
@@ -42,6 +43,11 @@ export default function CalendlyBooking() {
         >
           Show available times
         </button>
+        <p className="calendly-gate__tob-note">
+          Before proceeding, please read our{" "}
+          <a href={`${basePath}/terms-of-business`}>Terms of Business</a>, which sets out our
+          services and fees.
+        </p>
       </div>
     );
   }

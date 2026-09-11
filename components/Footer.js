@@ -8,7 +8,6 @@ import {
   getCommissionDisclosureStatement,
   getFeesForAdviceStatement,
   getExternalLinkCaveat,
-  getComplaintsStatement,
   telHref,
   whatsappHref,
 } from "@/lib/siteConfig";
@@ -43,6 +42,9 @@ export default function Footer() {
               />
               <p className="footer-fiba__caption">Financial Intermediary &amp; Broker Association</p>
             </div>
+            <p className="footer-risk-warning">
+              Your property may be repossessed if you do not keep up repayments on your mortgage.
+            </p>
           </div>
 
           <div className="footer-col">
@@ -59,6 +61,8 @@ export default function Footer() {
             <a href={`${basePath}/#approach`}>Approach</a>
             <a href={`${basePath}/#contact`}>Contact</a>
             <a href={`${basePath}/privacy`}>Privacy Policy</a>
+            <a href={`${basePath}/terms-of-business`}>Terms of Business</a>
+            <a href={`${basePath}/complaints`}>Complaints</a>
           </div>
 
           <div className="footer-col">
@@ -70,10 +74,6 @@ export default function Footer() {
             </a>
           </div>
         </div>
-
-        <p className="footer-risk-warning">
-          Your property may be repossessed if you do not keep up repayments on your mortgage.
-        </p>
 
         <div className="regulatory">
           <p>{getRegulatoryStatement()}</p>
@@ -91,16 +91,10 @@ export default function Footer() {
           <p>{getFeesForAdviceStatement()}</p>
           <p>{getCommissionDisclosureStatement()}</p>
           <p>{getExternalLinkCaveat()}</p>
-          <p>{getComplaintsStatement()}</p>
           <p>
-            Financial Ombudsman Service:{" "}
-            <a
-              href="https://www.financial-ombudsman.org.uk"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              www.financial-ombudsman.org.uk
-            </a>
+            If you wish to complain about our advice or service, please see our{" "}
+            <a href={`${basePath}/complaints`}>Complaints</a> page for how to do so and your right
+            to refer the matter to the Financial Ombudsman Service.
           </p>
         </div>
 
