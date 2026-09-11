@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   workflow_dispatch:
 
 permissions:
@@ -28,6 +28,8 @@ jobs:
       - run: npm ci
 
       - name: Build
+        env:
+          NEXT_BASE_PATH: /rockgate-react
         run: npm run build
 
       - uses: actions/configure-pages@v5
