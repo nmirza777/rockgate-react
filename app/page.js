@@ -10,12 +10,15 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="container hero__grid">
           <div>
-            <div className="eyebrow">Residential · Buy-to-let · Bridging · Commercial</div>
+            <div className="eyebrow">
+              Residential · Buy-to-let · Portfolio Landlords · Bridging · Commercial
+            </div>
             <h1>Specialist property finance, arranged properly.</h1>
             <p className="hero__copy">
-              Mortgage advice and specialist property finance for homeowners, landlords, property
-              investors, developers and business owners. Clear recommendations, carefully
-              researched options and one point of contact from enquiry to completion.
+              Mortgage advice and specialist property finance for homeowners, individual and
+              portfolio landlords with complex shareholding structures, property investors,
+              developers and business owners. Clear recommendations, carefully researched options
+              and one point of contact from enquiry to completion.
             </p>
             <div className="hero__actions">
               <a className="button button--accent" href="#contact">
@@ -97,7 +100,7 @@ export default function Home() {
               <div className="service-card__icon">B</div>
               <h3>Buy-to-let</h3>
               <p>
-                Finance for individual and limited-company landlords, portfolio refinancing, HMOs
+                Finance for individual and portfolio landlords, limited-company structures, HMOs
                 and selected specialist property types.
               </p>
               <a className="service-card__link" href="#contact">
