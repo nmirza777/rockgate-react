@@ -216,35 +216,53 @@ button {
 
 .menu-toggle {
   display: none;
+  position: relative;
   width: 46px;
   height: 46px;
   border: 1px solid var(--line);
   background: var(--white);
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: 5px;
   cursor: pointer;
 }
 
-.menu-toggle span {
+.menu-toggle__bars {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-toggle__bars span {
   width: 21px;
   height: 2px;
   border-radius: 999px;
   background: var(--ink);
-  transition: transform 0.22s ease, opacity 0.22s ease;
+  transition: transform 0.28s ease, opacity 0.2s ease;
 }
 
-.menu-toggle[aria-expanded="true"] span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-
-.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+.menu-toggle__mark {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 18px;
+  height: 19px;
   opacity: 0;
+  transform: scale(0.6);
+  transition: transform 0.3s ease, opacity 0.24s ease;
 }
 
-.menu-toggle[aria-expanded="true"] span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+.menu-toggle[aria-expanded="true"] .menu-toggle__bars span {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.menu-toggle[aria-expanded="true"] .menu-toggle__mark {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .button {

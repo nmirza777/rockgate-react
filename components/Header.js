@@ -99,9 +99,12 @@ export default function Header() {
             aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
             onClick={() => setMenuOpen((open) => !open)}
           >
-            <span></span>
-            <span></span>
-            <span></span>
+            <span className="menu-toggle__bars">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <BrandMark className="menu-toggle__mark" fill="#0F241F" />
           </button>
 
           <nav
