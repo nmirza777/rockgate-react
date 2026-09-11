@@ -331,6 +331,9 @@ export default function Home() {
           <div className="calendly-block">
             <div className="section-label">Book a call</div>
             <h3 className="calendly-block__title">Prefer to pick a time yourself?</h3>
+            <p className="risk-warning-banner">
+              Your property may be repossessed if you do not keep up repayments on your mortgage.
+            </p>
             <CalendlyBooking />
           </div>
         </div>

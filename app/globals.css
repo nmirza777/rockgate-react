@@ -938,6 +938,19 @@ section.content-section {
   display: block;
 }
 
+.risk-warning-banner {
+  margin: 0 0 24px;
+  max-width: 560px;
+  padding: 14px 18px;
+  border: 1px solid var(--bronze);
+  border-radius: 4px;
+  background: #f0e8dc;
+  color: #5e4527;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
 .calendly-gate {
   max-width: 480px;
   padding: 28px;
